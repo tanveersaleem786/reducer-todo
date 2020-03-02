@@ -1,34 +1,19 @@
-// export const initialState = [
-//    "todos"[
-//        {  
-//         item: 'Learn about reducers',
-//         completed: false,
-//         id: 3892987589
-//        },
-//        {
-//         item: 'Learn about Advance Reducers',
-//         completed: false,
-//         id: 3892987589
-//       }
-//     ]
-// ]
-
 export const initialState = [
    
-        {  
-         item: 'Learn about reducers',
-         completed: false,
-         id: 3892987589
-        },
-        {
-         item: 'Learn about Advance Reducers',
-         completed: false,
-         id: 3892987587
-       }
+    {  
+        item: 'Learn about reducers',
+        completed: false,
+        id: 3892987589,
+        tags: 'A, B, C'
+    },
+    {
+        item: 'Learn about Advance Reducers',
+        completed: false,
+        id: 3892987587,
+        tags: 'X, Y, Z'
+    }
     
  ]
-
-
 
 export const todoReducer = (state, action) => {
 
@@ -36,11 +21,13 @@ export const todoReducer = (state, action) => {
         
         case 'ADD_TODO':     
             const newTodo = {
-                item: action.payload,
+                item: action.payload.newTodo,
                 completed: false,
-                id: Date.now()
-            }                        
-            return [...state,newTodo]
+                id: Date.now(),
+                tags: action.payload.tags
+            } 
+                                
+            return [...state, newTodo]
         
         case 'TOGGLE_TODO':
             

@@ -2,7 +2,7 @@
 * {
     box-sizing: border-box;
   }
-  
+
   /* Remove margins and padding from the list */
   ul {
     margin: 0;   
@@ -90,19 +90,18 @@
   
   /* Style the input */
   input {
-    margin: 0;
+    margin: 5px;
     border: none;
     border-radius: 0;
-    width: 75%;
+    width: 36%;
     padding: 10px;
-    float: left;
     font-size: 16px;
   }
   
   /* Style the "Add" button */
   .addBtn {
     padding: 10px;
-    width: 25%;
+    width: 15%;
     background: #d9d9d9;
     color: #555;
     float: left;
@@ -118,6 +117,12 @@
   }
 
   .completedBtn {
-      margin-left: 39%;
-      margin-top: 1%;
+    margin-left: 39%;
+    margin-top: 1%;
   }
+
+  form {
+    display: flex;
+    justify-content: space-evenly;
+  }
+

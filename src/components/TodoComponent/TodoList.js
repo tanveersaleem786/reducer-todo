@@ -8,9 +8,7 @@ const TodoList = props => {
         <ul id="myUL">          
             {props.state !== null && props.state.map(todo => (
              <Todo key={todo.id} todo={todo} toggleTodo={props.toggleTodo} />
-            ))} 
-          
-                   
+            ))}       
          </ul>
         <button className="addBtn  completedBtn" onClick={props.clearCompleted}>Clear Completed</button>
        </div> 

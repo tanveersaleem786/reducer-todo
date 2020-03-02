@@ -7,8 +7,7 @@ const Todo = props => {
         //console.log(props);
       
         return (         
-            <li className={props.todo.completed ? " checked" : ""}  onClick={() => props.toggleTodo(props.todo.id)}>{props.todo.item}</li>
-         
+        <li className={props.todo.completed ? " checked" : ""}  onClick={() => props.toggleTodo(props.todo.id)}>{props.todo.item}<br></br>Tags: {props.todo.tags}</li>
         );
       };
       
