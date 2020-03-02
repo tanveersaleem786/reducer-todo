@@ -33,10 +33,7 @@ export const todoReducer = (state, action) => {
             
             const toggle =  state.map(todo => {
              
-              if (action.payload === todo.id) {
-                // console.log('in',action.payload+'==='+todo.id);              
-                //   console.log("fsaf",!todo.completed)
-                //return {state, completed: true}
+              if (action.payload === todo.id) {                
                 return {...todo, completed: !todo.completed};
               }
               else
@@ -45,8 +42,7 @@ export const todoReducer = (state, action) => {
             })
             return toggle;
 
-        case 'CLEAR_COMPLETED_TODO':
-            //return [...state, state.filter( todo => todo.completed === false)];
+        case 'CLEAR_COMPLETED_TODO':           
             return  state.filter( todo => todo.completed === false);
             
          

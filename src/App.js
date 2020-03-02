@@ -12,8 +12,7 @@ function App() {
   const [tags, setTags] = React.useState([]);
 
   const [state, dispatch] = useReducer(todoReducer, initialState);
-  //console.log(state);
-  //const [newTodo, SetNewTodo] = {};
+ 
 
 
   const submitTodo = (e) => {
@@ -35,9 +34,7 @@ function App() {
 
   const clearCompleted = e => {
     e.preventDefault();    
-    dispatch({type:"CLEAR_COMPLETED_TODO"}); 
-    //alert('asfsdaf');  
-    //console.log('sfsadfa');
+    dispatch({type:"CLEAR_COMPLETED_TODO"});    
   };
 
   const removeTags = indexToRemove => {
